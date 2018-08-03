@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update table="sys_hub_flow_snapshot">
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <description/>
+        <label_cache>[{"name":"Created_1.current.comments","label":"Trigger➛Scan Log Record➛Comments","reference":"","reference_display":"Comments","type":"string","base_type":"string","parent_table_name":"x_100632_physical_scan_log","column_name":"comments"},{"name":"Created_1.current.geolocation","label":"Trigger➛Scan Log Record➛GeoLocation","reference":"","reference_display":"GeoLocation","type":"string","base_type":"string","parent_table_name":"x_100632_physical_scan_log","column_name":"geolocation"},{"name":"Created_1.current.location","label":"Trigger➛Scan Log Record➛Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"x_100632_physical_scan_log","column_name":"location"},{"name":"Created_1.current.sys_created_on","label":"Trigger➛Scan Log Record➛Created","reference":"","reference_display":"Created","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"x_100632_physical_scan_log","column_name":"sys_created_on"},{"name":"Created_1.current.asset_hardware.sys_created_on","label":"Trigger➛Scan Log Record➛Asset Hardware➛Created","reference":"","reference_display":"Created","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"alm_hardware","column_name":"sys_created_on"},{"name":"Created_1.current.asset_hardware.sys_created_by","label":"Trigger➛Scan Log Record➛Asset Hardware➛Created by","reference":"","reference_display":"Created by","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"sys_created_by"},{"name":"Created_1.current.asset_hardware.display_name","label":"Trigger➛Scan Log Record➛Asset Hardware➛Display name","reference":"","reference_display":"Display name","type":"string","base_type":"string","parent_table_name":"alm_hardware","column_name":"display_name"},{"name":"Created_1.current.asset_hardware","label":"Trigger➛Scan Log Record➛Asset Hardware","reference":"alm_hardware","reference_display":"Asset Hardware","type":"reference","base_type":"reference","parent_table_name":"x_100632_physical_scan_log","column_name":"asset_hardware"},{"name":"Created_1.current","label":"Trigger➛Scan Log Record","reference":"x_100632_physical_scan_log","reference_display":"Scan Log","type":"reference","base_type":"reference"}]</label_cache>
+        <name>Update Asset Record</name>
+        <parent_flow display_value="Update Asset Record">75efcda4dba3130087ad5385ca9619f2</parent_flow>
+        <remote_trigger_id/>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-07-23 17:18:55</sys_created_on>
+        <sys_id>2cc11528dba3130087ad5385ca96195e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Update Asset Record</sys_name>
+        <sys_package display_value="Physical Inventory" source="x_100632_physical">0d3e2428db23130087ad5385ca96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Physical Inventory">0d3e2428db23130087ad5385ca96195e</sys_scope>
+        <sys_update_name>sys_hub_flow_snapshot_2cc11528dba3130087ad5385ca96195e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-07-23 17:18:55</sys_updated_on>
+    </sys_hub_flow_snapshot>
+</record_update>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Set the Asset Item based on new value of QR code - which will be the Asset Number</description>
+        <field>barcode</field>
+        <global>true</global>
+        <messages/>
+        <name>SetAssetItemForQR</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	if (isLoading || newValue === '') {
+		return;
+	}
+	// Scan Log has attribute asset_item that is a reference to table Materials Supplies Asset	
+	var util = new GlideAjax('FMTAssetUtil');
+	util.addParam('sysparm_name', 'getSysId');
+	util.addParam('assetNumber', newValue.toString());
+	util.getXMLAnswer(setAsset);
+	//setAsset('i am calling it explicitly');
+}
+
+function setAsset(response){
+	alert('newValue in setAsset: ' + response);
+	g_form.setValue('asset_item', response);
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-08-01 18:57:06</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>eecd7fdbdb23130087ad5385ca9619bd</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>SetAssetItemForQR</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Physical Inventory" source="x_100632_physical">0d3e2428db23130087ad5385ca96195e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Physical Inventory">0d3e2428db23130087ad5385ca96195e</sys_scope>
+        <sys_update_name>sys_script_client_eecd7fdbdb23130087ad5385ca9619bd</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-08-03 18:53:34</sys_updated_on>
+        <table>x_100632_physical_scan_log</table>
+        <type>onChange</type>
+        <ui_type>1</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>

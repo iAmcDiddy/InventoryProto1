@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<database>
+    <element label="Scan Log" max_length="40" name="x_100632_physical_scan_log" type="collection">
+        <element attributes="barcode=true" label="Asset Hardware" max_length="32" name="asset_hardware" reference="alm_hardware" type="reference"/>
+        <element label="Asset Item" max_length="32" name="asset_item" reference="u_materials_supplies_asset" type="reference"/>
+        <element attributes="barcode=true" label="Barcode" max_length="40" name="barcode" type="string"/>
+        <element label="Comments" max_length="4000" name="comments" type="string"/>
+        <element attributes="current_location=true" label="GeoLocation" max_length="255" name="geolocation" type="string"/>
+        <element label="Location" max_length="32" name="location" reference="cmn_location" type="reference"/>
+        <element calculation="&#13;&#10;&#13;&#10;'http://maps.google.com/maps?q=' + current.geolocation" label="Map Link" max_length="1024" name="map_link" type="url" virtual="true"/>
+        <element default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <index name="index">
+            <element name="asset_hardware"/>
+        </index>
+        <index name="index2">
+            <element name="location"/>
+        </index>
+        <index name="index3">
+            <element name="asset_item"/>
+        </index>
+    </element>
+</database>
