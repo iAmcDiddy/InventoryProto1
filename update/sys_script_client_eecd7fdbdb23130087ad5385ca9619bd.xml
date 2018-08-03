@@ -19,7 +19,6 @@
 	util.addParam('sysparm_name', 'getSysId');
 	util.addParam('assetNumber', newValue.toString());
 	util.getXMLAnswer(setAsset);
-	//setAsset('i am calling it explicitly');
 }
 
 function setAsset(response){
@@ -32,7 +31,7 @@ function setAsset(response){
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>eecd7fdbdb23130087ad5385ca9619bd</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name>SetAssetItemForQR</sys_name>
         <sys_overrides/>
         <sys_package display_value="Physical Inventory" source="x_100632_physical">0d3e2428db23130087ad5385ca96195e</sys_package>
@@ -40,7 +39,7 @@ function setAsset(response){
         <sys_scope display_value="Physical Inventory">0d3e2428db23130087ad5385ca96195e</sys_scope>
         <sys_update_name>sys_script_client_eecd7fdbdb23130087ad5385ca9619bd</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2018-08-03 18:53:34</sys_updated_on>
+        <sys_updated_on>2018-08-03 19:12:21</sys_updated_on>
         <table>x_100632_physical_scan_log</table>
         <type>onChange</type>
         <ui_type>1</ui_type>
